@@ -1,0 +1,531 @@
+html {
+	height: 100%;
+}
+
+body {
+	font-family: Montserrat;
+	background-image: radial-gradient(#252525, #191919);
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+main {
+	height: 100%;
+	display: table;
+	width: 100%;
+}
+
+.wrapper {
+	display: table-cell;
+	height: 100%;
+	vertical-align: middle;
+}
+
+.dash {
+	width: 80%;
+	margin: auto;
+	background-color: #121212;
+	float: center;
+	text-align: center;
+	border-radius: 10px;
+	height: 500px;
+	overflow: hidden;
+}
+
+.header {
+	background-color: #161616;
+	width: 100%;
+	border-radius: 10px 10px 0 0;
+	padding: 10px 0px;
+	color: #D6D6D6;
+	text-align: left;
+	font-size: 14px;
+	user-select: none;
+}
+
+.tab {
+	display: inline;
+	padding: 10px 20px;
+	cursor: pointer;
+	transition: 0.5s;
+	font-weight: bold;
+}
+
+.tab:hover {
+	background-color: #121212;
+}
+
+.tab:focus {
+	outline: none;
+	border: none;
+}
+
+.activetab {
+	background-color: #121212;
+}
+
+.left-tab {
+	border-radius: 10px 0 0 0;
+}
+
+.dropdown {
+	position: absolute;
+	z-index: 4;
+	margin-top: 6px;
+	background-color: #161616;
+	display: block;
+	border-radius: 0 0 10px 0;
+	visibility: hidden;
+	opacity: 0;
+	transition: 0.5s;
+}
+
+.drop {
+	display: block;
+	padding: 10px 20px;
+	cursor: pointer;
+	transition: 0.5s;
+	font-weight: bold;
+}
+
+.drop:hover {
+	background-color: #121212;
+}
+
+.left-tab:hover .dropdown {
+	visibility: visible;
+	opacity: 1;
+	transform: translateY(5%);
+}
+
+.circle {
+	height: 12px;
+	width: 12px;
+	background-color: #E31E1E;
+	margin: 4px 20px;
+	float: right;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.circle:hover {
+	background-color: #E32E2E;
+}
+
+.back {
+	position: absolute;
+	z-index: 2;
+	margin: 20px 0 0 0;
+	float: left;
+	color: #A6A6A6;
+	font-size: 30px;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.back:hover {
+	transform: translateX(-20%);
+}
+
+.line {
+	background-color: #262626;
+	width: 1px;
+	height: 462px;
+	position: absolute;
+	margin: 0 40%;
+	z-index: 3;
+}
+
+.editor {
+	width: 49.5%;
+	height: 460px;
+	display: inline-block;
+	margin: 0;
+	transition: 0.5s;
+	opacity: 0;
+}
+
+.profile {
+	width: 49.5%;
+	height: 460px;
+	display: none;
+	margin: 0;
+	text-align: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	user-select: none;
+	transition: 0.5s;
+	opacity: 0;
+}
+
+.active {
+	opacity: 1;
+}
+
+.left {
+	border-radius: 0 0 0 10px;
+	float: left;
+}
+
+.right {
+	border-radius: 0 0 10px 0;
+	float: right;
+}
+
+.profilephoto {
+	height: 150px;
+	width: 150px;
+	background-color: #D6D6D6;
+	margin: 100px 30% 0px 30%;
+	border-radius: 50%;
+	background-position: center center;
+	background-size: cover;
+	border: 4px solid #D6D6D6;
+}
+
+.photooverlay {
+	opacity: 0;
+	position: absolute;
+	z-index: 0;
+	height: 150px;
+	width: 150px;
+	margin: 100px 0 0 0;
+	color: #D6D6D6;
+	background-image: linear-gradient(rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 60%);
+	border-radius: 50%;
+	font-size: 12px;
+	transition: 0.5s;
+}
+
+.overlaytext {
+	margin-top: 90px;
+	cursor: pointer;
+	padding: 20px;
+}
+
+.photooverlay:hover {
+	opacity: 1;
+}
+
+.fullname {
+	font-weight: bold;
+	font-size: 25px;
+	height: 40px;
+	margin: -20px 30% 0 30%;
+	color: #D6D6D6;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.username {
+	font-size: 15px;
+	margin: -40px 30% 0 30%;
+	color: #A6A6A6;
+	height: 30px;
+	transition: 0.5s;
+}
+
+.emailout {
+	margin: 60px 20% 0px 20%;
+	transition: 0.5s;
+	cursor: pointer;
+	height: 60px;
+}
+
+.mobileout {
+	margin: 0px 20%;
+	transition: 0.5s;
+	cursor: pointer;
+	height: 60px;
+}
+
+.verifyout {
+	margin: -10px 20%;
+	height: 60px;
+	transition: 0.5s;
+}
+
+.sent {
+	margin: 0px 20%;
+	height: 60px;
+	color: #A6A6A6;
+	font-size: 14px;
+	position: absolute;
+	margin: -28px 0 0 235px;
+	visibility: hidden;
+}
+
+.label {
+	color: #A6A6A6;
+	font-size: 15px;
+}
+
+.email, .mobile, .verify {
+	color: #D6D6D6;
+	font-weight: bold;
+	font-size: 18px;
+	letter-spacing: 2px;
+	margin-top: 10px;
+}
+
+.activetransition {
+	transform: translateY(20%);
+}
+
+.edit {
+	font-size: 10px;
+	padding: 10px;
+	position: absolute;
+	margin-left: 5px;
+	cursor: pointer;
+	opacity: 0;
+	transition: 0.5s;
+}
+
+.mobile .edit, .email .edit, .verify .edit {
+	margin-top: -5px;
+}
+
+.profile:hover .edit{
+	opacity: 1;
+}
+
+.formfullname {
+	display: none;
+	margin-top: -22px;
+	margin-bottom: 0px;
+	transition: 0.5s;
+	height: 40px;
+}
+
+.boxfullname {
+	background-color: transparent;
+	border: 0;
+	border-bottom: 1px solid #A6A6A6;
+	color: #D6D6D6;
+	font-family: Montserrat;
+	text-align: center;
+	font-size: 25px;
+	width: 250px;
+	font-weight: bold;
+}
+
+.formemail {
+	display: none;
+	margin: 10px 50px 0px 50px;
+	transition: 0.5s;
+}
+
+.boxemail, .boxmobile {
+	background-color: transparent;
+	border: 0;
+	border-bottom: 1px solid #A6A6A6;
+	color: #D6D6D6;
+	font-family: Montserrat;
+	text-align: center;
+	font-size: 18px;
+	width: 250px;
+	font-weight: bold;
+}
+
+.formmobile {
+	display: none;
+	margin: 10px 50px 0px 50px;
+	transition: 0.5s;
+}
+
+.buttonverify {
+	background-color: rgba(28, 29, 38, 0.5);
+	border: none;
+	outline: none;
+	color: white;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	font-family: Montserrat;
+	font-size: 14px;
+	transition-duration: 0.5s;
+	cursor: pointer;
+	border-radius: 6px;
+	margin-top: 10px;
+}
+
+.buttonverify:hover {
+	background-color: rgba(28, 29, 38, 1);
+}
+
+.buttonverify:focus {
+	border: none;
+	outline: none;
+	background-color: rgba(28, 29, 38, 1);
+}
+
+.buttonverify::-moz-focus-inner {
+	border: none;
+	outline: none;
+}
+
+.textline {
+	resize: none;
+	background-color: transparent;
+	border: 0px solid white;
+	color: #565656;
+	height: 87.8%;
+	padding: 2%;
+	border-radius: 0 0 0 10px;
+	overflow: hidden;
+	line-height: 18px;
+	text-align: right;
+	margin-left: -10px;
+}
+
+.doc {
+	display: inline-block;
+	width: 87%;
+	height: 88%;
+	padding: 0;
+	margin-top: 30px;
+}
+
+.textedit {
+	resize: none;
+	background-color: transparent;
+	border: 0px solid white;
+	color: #D6D6D6;
+	width: 100%;
+	height: 100%;
+	padding: 2%;
+	line-height: 18px;
+	-moz-tab-size : 4;
+	tab-size : 4;
+}
+
+.lineedit {
+	background-color: #262626;
+	width: 1px;
+	height: 462px;
+	position: absolute;
+	margin: 0 3.5%;
+	z-index: 3;
+}
+
+.titlelabel {
+	position: absolute;
+	z-index: 1;
+	color: #A6A6A6;
+	font-size: 15px;
+	margin: -20px 0 0 10px;
+	user-select: none;
+}
+
+.title {
+	background-color: transparent;
+	border: 0px solid white;
+	position: absolute;
+	z-index: 1;
+	margin: -21px 0 0 100px;
+	color: #D6D6D6;
+	font-family: Montserrat;
+	font-size: 15px;
+}
+
+.outputlabel {
+	position: absolute;
+	z-index: 1;
+	color: #A6A6A6;
+	font-size: 15px;
+	margin: 10px 0 0 10px;
+	user-select: none;
+}
+
+.textoutput {
+	resize: none;
+	background-color: transparent;
+	border: 0px solid white;
+	color: #D6D6D6;
+	width: 95%;
+	height: 88%;
+	padding: 2%;
+	line-height: 18px;
+	-moz-tab-size : 4;
+	tab-size : 4;
+	margin-top: 30px;
+}
+
+.open {
+	display: none;
+	position: fixed;
+	z-index: 5;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0,0,0,0.5);
+}
+
+.open-wrapper {
+	display: table-cell;
+	height: 100%;
+	vertical-align: middle;
+}
+
+.open-content {
+	width: 50%;
+	margin: auto;
+	background-color: #121212;
+	float: center;
+	text-align: center;
+	border-radius: 10px;
+	height: 400px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	transform: scale(0);
+	transition: 0.5s;
+}
+
+.animate {
+	transform: scale(1);
+}
+
+.open-label {
+	font-weight: bold;
+	font-size: 20px;
+	margin: 15px;
+	color: #D6D6D6;
+	user-select: none;
+}
+
+.open-line-1 {
+	background-color: #262626;
+	width: 102%;
+	height: 1px;
+	margin: 0px;
+}
+
+.open-file {
+	width: 102%;
+	padding: 0%;
+	background-color: transparent;
+	border-collapse: collapse;
+	border-bottom: 1px solid #262626;
+	user-select: none;
+	cursor: pointer;
+}
+
+tr {
+	transition: 0.4s;
+}
+
+tr:hover {
+	background-color: #262626;
+}
+
+td {
+	color: #A6A6A6;
+	font-size: 15px;
+	padding: 10px;
+	border-right: 1px solid #262626;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Text Editor </title>
+	<link rel="stylesheet" href="stylesheets/stylehome.css">
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+	<script src="javascripts/script.js"></script> 
+	<script src="https://kit.fontawesome.com/df4523dfb1.js" crossorigin="anonymous"></script>
+</head>
+<body onload = "Text(false)">
+	<main>
+		<section class="wrapper">
+			<section class = "open">
+				<section class = "open-wrapper">
+					<section class = "open-content">
+						<section class = "open-label">Open File</section>
+						<section class = "open-line-1"></section>
+						<table class = "open-file"></table>
+					</section>
+				</section>
+			</section>
+			<section class = "dash">
+				<section class = "header">
+					<section class = "tab left-tab"> File
+						<section class = "dropdown">
+							<section class = "drop" onclick = "Explore()"> Open File </section>
+							<section class = "drop" onclick = "SaveBuild()"> Save File </section>
+						</section>
+					</section>
+					<section class = "tab" onclick = "SaveBuild()"> Build </section>
+					<section class = "tab profiletab" onclick="Profile()"> Profile </section>
+					<section class = "circle" onclick = "Logout()"> </section>
+				</section>
+				<section class = "editor left active">
+					<section class = "lineedit"> </section>
+					<textarea class = "textline" disabled cols = "3">&nbsp&nbsp1</textarea>
+					<form name = "doc" class = "doc">
+						<label class = "titlelabel">File Name</label>
+						<input type = "text" class = "title" name = "title" autofocus = "true">
+						<textarea class = "textedit" name = "text" autocomplete = "false" spellcheck = "false"></textarea>
+					</form>
+				</section>
+				<section class = "profile left">
+					<section class = "back" onclick = "Editor()"> <i class='fas fa-angle-double-left'> </i> </section>
+					<section class = "profilephoto"> </section>
+					<section class = "photooverlay">
+						<section class = "overlaytext" onclick = "Click()"> Click to Update </section>
+						<form class = "formimage" style = "display: none">
+							<input type = "file" name = "image" class = "upload" onchange = "Upload()">
+						</form>
+					</section>
+					<section class = "fullname" onclick = "Edit('fullname')"> Update Name
+						<i class="edit fas fa-pen" onclick = "Edit('fullname')"> </i>
+					</section>
+					<form name = "fullname" class = "formfullname">
+						<input type = "text" class = "boxfullname" placeholder = "Full Name" name="name" autocomplete="off" onkeypress = "Submit('fullname')">
+						<input type = "text" name = "dummy" style = "display: none" disabled>
+					</form>
+					<section class = "username"> Username </section>
+				</section>
+				<section class = "line"> </section>
+				<section class = "editor right active">
+					<label class = "outputlabel">Please Type in File Name for Output</label>
+					<textarea class = "textoutput" disabled autocomplete = "false" spellcheck = "false"></textarea>
+				</section>
+				<section class = "profile right">
+					<section class = "emailout">
+						<section class = "label" onclick = "Edit('email')"> Email </section>
+						<section class = "email" onclick = "Edit('email')"> Please Update
+							<i class="edit fas fa-pen"> </i>
+						</section>
+						<form name = "email" class = "formemail">
+							<input type = "text" class = "boxemail" placeholder = "Email ID" name="email" autocomplete="off" onkeypress = "Submit('email')">
+							<input type = "text" name = "dummy" style = "display: none" disabled>
+						</form>
+					</section>
+					<section class = "mobileout">
+						<section class = "label" onclick = "Edit('mobile')"> Mobile </section>
+						<section class = "mobile" onclick = "Edit('mobile')"> Please Update
+							<i class="edit fas fa-pen"> </i>
+						</section>
+						<form name = "mobile" class = "formmobile">
+							<input type = "text" class = "boxmobile" placeholder = "Mobile Number" name="mobile" autocomplete="off" onkeypress = "Submit('mobile')">
+							<input type = "text" name = "dummy" style = "display: none" disabled>
+						</form>
+					</section>
+					<section class = "verifyout">
+						<section class = "label"> Email Verification </section>
+						<section class = "verify"> Your Account is Not Verified </section>
+						<input type = "button" class = "buttonverify" onclick = "Verify()" value = "Click to Verify">
+						<section class = "sent">Email Sent!</section>
+					</section>
+				</section>
+			</section>
+		</section>
+	</main>
+</body>
+</html>

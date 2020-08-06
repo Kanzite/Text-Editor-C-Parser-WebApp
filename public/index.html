@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Text Editor </title>
+	<link rel="stylesheet" href="stylesheets/style.css">
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+	<script src="javascripts/script.js"></script> 
+	<script src="https://kit.fontawesome.com/df4523dfb1.js" crossorigin="anonymous"></script>
+</head>
+<body onload="error()">
+	<main>
+		<section class="wrapper">
+			<section class = "intro">
+				<section class="circle"> </section>
+				<section class = "texted"> Text Editor </section>
+				<section class = "welcome"> welcome </section>
+				<section class="result"> Temporary Text </section>
+				<section class = "login">
+					<form class="loginform">
+						<input class="textinp" type="text" placeholder="Username" name="username" autocomplete="off" required>
+						<input class="textinp" type="password" placeholder="Password" name="password" autocomplete="off" required>
+					</form>
+					<input class="buttonlogin" type="button" onclick="Login()" value="Login"> <br>
+					<button class="buttonshift" onclick="SignUpShift()">
+						<i class='fas fa-angle-left'> </i> Sign Up?
+					</button>
+				</section>
+				<section class = "signup">
+					<form class="signupform">
+						<input class="textinp" type="text" placeholder="Username" name="username" autocomplete="off" required>
+						<input class="textinp" type="password" placeholder="Password" name="password" autocomplete="off" required>
+					</form>
+					<input class="buttonlogin" type="button" onclick="SignUp()" value="Sign Up"> <br>
+					<button class="buttonshift" onclick="LoginShift()">
+						Login? <i class='fas fa-angle-right'> </i>
+					</button>
+				</section>
+			</section>
+		</section>
+	</main>
+</body>
+</html>

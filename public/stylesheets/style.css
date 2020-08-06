@@ -1,0 +1,206 @@
+html {
+	height: 100%;
+}
+
+body {
+	font-family: Montserrat;
+	background-image: radial-gradient(#383A4A, #1C1D26);
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+main {
+	height: 100%;
+	display: table;
+	width: 100%;
+}
+
+.wrapper {
+	display: table-cell;
+	height: 100%;
+	vertical-align: middle;
+}
+
+.intro {
+	width: 600px;
+	margin: auto;
+	padding: 20px 60px;
+	background-color: white;
+	float: center;
+	text-align: center;
+	border-radius: 10px;
+	height: 450px;
+}
+
+.circle {
+	height: 120px;
+	width: 120px;
+	margin: -80px 240px;
+	position: absolute;
+	background-color: white;
+	border-radius: 50%;
+	z-index: 10;
+}
+
+.welcome {
+	margin: 20px;
+	font-size: 20px;
+	color: rgba(28, 29, 38, 0.5);
+	user-select: none;
+}
+
+.texted {
+	margin-top: 70px;
+	font-size: 40px;
+	color: rgba(28, 29, 38, 1);
+	user-select: none;
+}
+
+.result {
+	font-size: 10px;
+	visibility: hidden;
+	color: red;
+}
+
+.login {
+	margin: 20px;
+	transition: all .6s ease-in-out;
+	opacity: 1;
+	position: absolute;
+	margin: 0px 150px;
+	z-index: 20;
+}
+
+.signup {
+	margin: 20px;
+	transition: all .6s ease-in-out;
+	opacity: 0;
+	pointer-events: none;
+	position: absolute;
+	margin: 0px 450px;
+	z-index: 15;
+}
+
+.textinp {
+	font-family: Montserrat;
+	font-size: 15px;
+	font-weight: bold;
+	display: block;
+	margin: 20px auto;
+	padding: 10px;
+	width: 280px;
+	outline: 0;
+	box-shadow: none;
+	border: 0;
+	border-bottom: 2px solid rgba(28, 29, 38, 0.5);
+	background: rgba(0, 0, 0, 0.05);
+	border-radius: 6px;
+	transition-duration: 1s;
+}
+
+.textinp:focus {
+	border-color: #38ef7d;
+}
+
+.buttonlogin {
+	background-color: rgba(28, 29, 38, 0.8);
+	border: none;
+	outline: none;
+	color: white;
+	width: 168px;
+	padding: 16px 32px;
+	text-align: center;
+	text-decoration: none;
+	font-family: Montserrat;
+	font-size: 16px;
+	margin: 0px 0px 0px 0px;
+	transition-duration: 1s;
+	cursor: pointer;
+	border-radius: 6px;
+}
+
+.buttonlogin:hover {
+	background-color: rgba(28, 29, 38, 1);
+}
+
+.buttonlogin:focus {
+	border: none;
+	outline: none;
+	background-color: rgba(28, 29, 38, 1);
+}
+
+.buttonlogin::-moz-focus-inner {
+	border: none;
+	outline: none;
+}
+
+.buttonshift {
+	margin-top: 20px;
+	background-color: rgba(0, 0, 0, 0.05);
+	border: 1px solid rgba(0, 0, 0, 0.2);;
+	outline: none;
+	color: white;
+	width: 125px;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	font-family: Montserrat;
+	font-size: 14px;
+	color: rgba(0, 0, 0, 0.8);
+	transition-duration: 1s;
+	cursor: pointer;
+	border-radius: 6px;
+}
+
+.fa-angle-left {
+	transition-timing-function: ease-in-out;
+	transition: 0.5s;
+	margin-right: 5px;
+}
+
+.buttonshift:hover .fa-angle-left {
+	transform: translateX(-100%);
+}
+
+.fa-angle-right {
+	transition-timing-function: ease-in-out;
+	transition: 0.5s;
+	margin-left: 5px;
+}
+
+.buttonshift:hover .fa-angle-right {
+	transform: translateX(100%);
+}
+
+.buttonshift:focus {
+	outline: none;
+}
+
+.buttonshift::-moz-focus-inner {
+	border: none;
+	outline: none;
+}
+
+.login-deactive {
+	transform: translateX(-100%);
+	opacity: 0;
+	pointer-events: none;
+}
+
+.signup-active {
+	transform: translateX(-100%);
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.dash {
+	width: 1000px;
+	margin: auto;
+	padding: 20px;
+	background-color: #121212;
+	float: center;
+	text-align: center;
+	border-radius: 10px;
+	height: 450px;
+}
