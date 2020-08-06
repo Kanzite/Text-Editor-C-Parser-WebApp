@@ -5,7 +5,7 @@
 To develop a convenient way to write C code and get instant parsing of the code, to reduce time spent on saving, compiling and running.
 
 ## Solution
-Developed a web based text editor which shows live parsing of the C language using a custom made parser and incorporates user authentication and email verification, auto file saving, and user profile details. The parse errors with expected symbols are show in real time.
+Developed a web based text editor which shows live parsing of the C language using a custom made parser and incorporates user authentication and email verification, auto file saving, and user profile details. The parse errors with expected symbols are shown in real time.
 
 ## Tech Stack
 Node.js, Express, MongoDB, JavaScript, and C Language
